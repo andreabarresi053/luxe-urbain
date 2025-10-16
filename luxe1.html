@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luxe-Urbain - Lusso e Stile</title>
+    <style>
+        :root {
+            --nero: #000000;
+            --oro: #d4af37;
+            --grigio: #f5f5f5;
+        }
+
+        body {
+            font-family: 'Playfair Display', 'Helvetica Neue', serif;
+            background-color: var(--nero);
+            color: var(--grigio);
+            margin: 0;
+            padding: 0;
+        }
+
+        /* HEADER */
+        header {
+            background-color: var(--nero);
+            color: var(--oro);
+            text-align: center;
+            padding: 2.5rem 1rem;
+            border-bottom: 2px solid var(--oro);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 3px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: var(--grigio);
+            margin-top: 0.5rem;
+        }
+
+        /* NAVBAR */
+        nav {
+            background-color: #111;
+            text-align: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--oro);
+        }
+
+        nav a {
+            color: var(--grigio);
+            text-decoration: none;
+            margin: 0 25px;
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--oro);
+        }
+
+        /* SEZIONE HOME */
+        .home {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)),
+                url('https://cdn.pixabay.com/photo/2017/03/23/12/46/fashion-2169927_1280.jpg') center/cover no-repeat;
+            color: var(--oro);
+            text-align: center;
+            padding: 7rem 10%;
+        }
+
+        .home h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .home p {
+            font-size: 1.2rem;
+            color: var(--grigio);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* PRODOTTI */
+        .prodotti {
+            background-color: #0a0a0a;
+            text-align: center;
+            padding: 4rem 10%;
+            border-top: 2px solid var(--oro);
+            border-bottom: 2px solid var(--oro);
+        }
+
+        .prodotti h2 {
+            font-size: 2.4rem;
+            color: var(--oro);
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid var(--oro);
+            display: inline-block;
+            padding-bottom: 0.5rem;
+        }
+
+        .galleria {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .galleria img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 2px solid var(--oro);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .galleria a img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px var(--oro);
+        }
+
+        .galleria a img {
+            cursor: pointer;
+        }
+
+        /* CONTATTI */
+        .contatti {
+            background-color: var(--nero);
+            color: var(--grigio);
+            text-align: center;
+            padding: 4rem 10%;
+        }
+
+        .contatti h2 {
+            color: var(--oro);
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contatti p {
+            font-size: 1.1rem;
+            margin: 10px 0;
+        }
+
+        .contatti a {
+            color: var(--oro);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contatti a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #111;
+            color: var(--grigio);
+            text-align: center;
+            padding: 1.2rem 0;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--oro);
+        }
+
+        footer span {
+            color: var(--oro);
+        }
+
+        @media (max-width: 768px) {
+            .galleria img {
+                width: 90%;
+                height: auto;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Luxe-Urbain</h1>
+        <p>Profumi e Abbigliamento di Lusso • Ralph Lauren • Lacoste</p>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#prodotti">Prodotti</a>
+        <a href="#contatti">Contatti</a>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="home">
+        <h2>Benvenuto da Luxe-Urbain</h2>
+        <p>
+            Entra nel mondo di <strong>Luxe-Urbain</strong>, dove l’eleganza incontra il carattere.  
+            Ogni articolo è scelto per rappresentare il vero significato del lusso moderno.  
+            Dai <strong>profumi esclusivi</strong> alle <strong>collezioni firmate Ralph Lauren e Lacoste</strong>,  
+            la nostra boutique celebra la raffinatezza in ogni dettaglio.
+        </p>
+    </section>
+
+    <!-- PRODOTTI -->
+    <section id="prodotti" class="prodotti">
+        <h2>Le Nostre Collezioni</h2>
+        <div class="galleria">
+            <!-- Creed Aventus con link a Vinted -->
+            <a href="https://www.vinted.it/items/6666991419-creed-aventus" target="_blank">
+                <img src="immagini/creed.png" alt="Profumo Creed Aventus">
+            </a>
+
+            <a href="https://www.vinted.it/items/7330511980-tom-ford-oud-wood"target="_blank">
+                <img src="immagini/tf.jpg" alt="Profumo elegante">
+            </a>
+
+            <a href="https://www.vinted.it/items/7306567554-gucci-belt-signature-black-exclusive-collection"target="_blank">
+                <img src="immagini/guc.png" alt="Accessori">
+            </a>
+
+            <a href="https://www.vinted.it/items/7019474219-lacoste-black-crewneck-sweatshirt-timeless-classic"target="_blank">
+                <img src="immagini/lac.jpg" alt="Abbigliamento">
+            </a>
+        </div>
+    </section>
+
+    <!-- CONTATTI -->
+    <section id="contatti" class="contatti">
+        <h2>Contattaci</h2>
+        <p>📞 <strong>Telefono:</strong> <a href="tel:+393773450279">+39 377 345 0279</a></p>
+        <p>📧 <strong>Email:</strong> <a href="mailto:luxeurbainoutlet@.com">luxeurbainoutlet@.com</a></p>
+        <p>🛍️ <strong>Vinted:</strong> <a href="https://www.vinted.it/member/60968160-luxe-urbain" target="_blank">luxe-urbain</a></p>
+        <p>Scopri le nostre novità e lasciati ispirare dal fascino del lusso autentico.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 <span>Luxe-Urbain</span> — L’eleganza vive nei dettagli.</p>
+    </footer>
+
+</body>
+</html>
